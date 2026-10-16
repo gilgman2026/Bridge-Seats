@@ -65,6 +65,8 @@ Private working sheet --(IMPORTRANGE)--> **public sheet** (published to the web)
     of "Section"). Verified only with the older single-group format; the newer "Overall Rank" format is untested.
   - `tidyTitle`: "Wednesday Morning Pairs Wednesday Mor Session September 30, 2026" is shown as
     "Wednesday Morning Pairs — September 30, 2026". Other titles fall back to the BridgeScores wording.
+- Each report table is sorted by Score, highest first (then Pct); ties keep the sheet's order. Newer reports
+  (for example Oct 14, 2026) list pairs in pair-number order, so the sheet order cannot be relied on.
 - A game's results are the reports whose title date matches the game's date (same y/m/d). There are
   normally two per date (N/S and E/W sections). No match shows "No results yet — this game hasn't been
   played, or the results haven't been posted."

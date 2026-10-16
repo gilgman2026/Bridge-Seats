@@ -348,6 +348,9 @@ function renderReportBlock(info, lines, highlight) {
     if (row) rows.push(row);
   }
   if (!rows.length) return "";
+  // Highest score first (pair order in the report is not meaningful). Ties keep
+  // the order they have in the sheet (Array.sort is stable).
+  rows.sort((a, b) => parseFloat(b.score) - parseFloat(a.score) || parseFloat(b.pct) - parseFloat(a.pct));
 
   const title = info.titleIdx !== null ? tidyTitle(lines[info.titleIdx]) : "";
   const subtitle = info.infoIdx !== null ? parseInfoLine(lines[info.infoIdx]) : "";
